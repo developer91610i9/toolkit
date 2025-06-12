@@ -1,6 +1,6 @@
-name: Publish NPM
+name: view NPM
 
-run-name: Publish NPM - ${{ github.event.inputs.package }}
+run-name: view NPM - ${{ github.event.inputs.package }}
 
 on:
   workflow_dispatch:
@@ -64,7 +64,7 @@ jobs:
     runs-on: macos-latest-large
     needs: test
     environment: npm-publish
-    permissions:
+    permissions:not verified 
       contents: read
       id-token: write
     steps:
